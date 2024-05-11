@@ -41,7 +41,7 @@ services:
       # 允许来自其他主机的根连接
       # https://dev.mysql.com/doc/refman/5.7/en/docker-mysql-more-topics.html#docker_var_mysql-root-host
       MYSQL_ROOT_HOST: "%"
-      MYSQL_ROOT_PASSWORD: 123456987
+      MYSQL_ROOT_PASSWORD: 123456
     ports:
       - "3306:3306"
     networks:
@@ -54,7 +54,7 @@ services:
   webstack-go-redis:
     image: redis:6.2.4
     container_name: webstack-go-redis
-    command: redis-server --requirepass 123456987
+    command: redis-server --requirepass 123456
     ports:
       - "6379:6379"
     networks:
